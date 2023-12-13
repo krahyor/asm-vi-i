@@ -16,3 +16,8 @@ jobs:
               name: Install NPM packages
             - run: node app.js
               name: Run Node application
+            - name: Upload static site content
+              uses: actions/upload-artifact@v3
+              with:
+                name: static-site
+                path: .next/
